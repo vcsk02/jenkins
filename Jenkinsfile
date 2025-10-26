@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options { timestamps() }
-  triggers { githubPush() }  
+  triggers { githubPush() }   // pairs with the /github-webhook/ endpoint
   stages {
     stage('Checkout') { steps { checkout scm } }
 
